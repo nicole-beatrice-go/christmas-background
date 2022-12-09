@@ -11,11 +11,43 @@
                 width: 100vw;
                 background-color: rgb(205, 234, 247);
             }
+            #foreground {
+                height: 20vh;
+                width: 100vw;
+                background-color: rgb(239, 239, 239);
+            }
+            .snowflake {
+                height: 5px;
+                width: 5px;
+                background-color: rgb(239, 239, 239);
+                border: 1px solid rgb(219, 219, 219);
+                position: absolute;
+            }
+            #sky {
+                height: 80vh;
+                width: 100vw;
+                position: relative;
+            }
         </style>
     </head>
     <body>
         <div id="background">
-            
+            <div id="sky">
+
+            </div>
+            <div id="foreground">
+            </div>
         </div>
+        <script>
+             var sky = document.getElementById("sky")
+             for (var i=0;  i<200; i++) {
+                var snowflake = document.createElement("div");
+                snowflake.classList.add("snowflake");
+                var randomXPosition = Math.floor(Math.random() * 100);
+                var randomYPosition = Math.floor(Math.random() * 80);
+                snowflake.style.transform = `translate(${randomXPosition}vw,${randomYPosition}vh)`
+                sky.appendChild(snowflake)
+             }
+        </script>
     </body>
 </html>
