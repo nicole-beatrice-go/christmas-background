@@ -1,2 +1,2 @@
 # christmas-background
-christmas background for the new kitchen tv lol
+The background can be found at `christmas-background.html`
